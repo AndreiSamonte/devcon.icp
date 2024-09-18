@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friendster Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Profile</h1>
+        </header>
+        <section class="profile">
+            <h2>Profile Information</h2>
+            <img id="profilePic" src="dp.png" alt="Profile Picture" class="profile-pic">
+            <p>Name: <span id="name">John Doe</span></p>
+            <p>Age: <span id="age">25</span></p>
+            <button onclick="editProfile()">Edit Profile</button>
+            <button onclick="changePicture()">Change Picture</button>
+        </section>
+        <section class="friends">
+            <h2>Friends List</h2>
+            <ul id="friendsList">
+                <li>Alice</li>
+                <li>Bob</li>
+                <li>Charlie</li>
+            </ul>
+        </section>
+    </div>
+    <div class="chat-head" onclick="toggleChat()">
+        💬
+    </div>
+    <div class="chat-window" id="chatWindow" style="display: none;">
+        <h2>Chat</h2>
+        <textarea placeholder="Type your message..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="toggleChat()">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
